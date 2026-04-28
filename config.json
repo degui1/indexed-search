@@ -1,0 +1,6 @@
+{
+  "algorithm": "linear",
+  "recursive": true,
+  "extensions": ["txt", "md", "js", "ts", "json", "html", "css"],
+  "maxFileSizeBytes": 1048576
+}

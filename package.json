@@ -1,0 +1,21 @@
+{
+  "name": "indexed-search",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/cli/index.ts",
+    "build": "tsc",
+    "dev": "tsx watch src/cli/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "3.8.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
