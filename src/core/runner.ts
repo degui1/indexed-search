@@ -9,8 +9,8 @@ export function measureBuild(
 
   engine.build(entries);
 
-  const buildTimeMs = Number(process.hrtime.bigint() - start);
-  const memoryDeltaBytes = process.memoryUsage().heapUsed - memBefore;
+  const buildTimeMs = Number(process.hrtime.bigint() - start) / 1_000_000;
+  const memoryDeltaBytes = process.memoryUsage().heapUsed - memBefore / 1_000_000;
 
   return {
     buildTimeMs,
@@ -26,7 +26,7 @@ export function measureSearch(
   const start = process.hrtime.bigint();
   const results = engine.search(term);
 
-  const searchTimeMs = Number(process.hrtime.bigint() - start);
+  const searchTimeMs = Number(process.hrtime.bigint() - start) / 1_000_000;
 
   return { results, searchTimeMs };
 }
